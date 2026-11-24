@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the page fit phone screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products | Deliny Electronics Center, Masaka</title>
+    <meta name="description" content="Deliny Electronics Center in Masaka, Uganda: TVs, phones, laptops, sound systems, solar and accessories.">
+    <!-- Connects this page to style.css, which holds all the colours and layout. Keep style.css in the same folder. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Small icon shown in the browser tab. -->
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <!-- TOP BAR: shop name and the menu. This same block is on every page. -->
+    <header>
+        <div class="wrap bar">
+            <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="Deliny Electronics Center: Buy, Sell, Service"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <label for="menu-toggle" class="menu-btn">Menu</label>
+            <nav aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- PAGE TITLE: the dark banner at the top of this page. -->
+    <div class="page-head">
+        <div class="wrap">
+            <h1>Our products</h1>
+            <p>Browse by category, then contact us for today's price and stock.</p>
+        </div>
+    </div>
+    <!-- A new section of the page -->
+    <section>
+        <div class="wrap">
+            <!-- QUICK LINKS: tapping one jumps down to that product group. -->
+            <div class="filters" role="group" aria-label="Filter products"><a href="#tv">Televisions and decoders</a><a href="#phones">Phones and tablets</a><a href="#computers">Computers and printers</a><a href="#audio">Sound systems</a><a href="#solar">Solar and power</a></div>
+            <!-- PRODUCT GROUPS: each group has a title and a row of product cards. -->
+            <div id="tv" class="group">
+                <h2 class="cat-title">Televisions and decoders</h2>
+                <div class="products">
+                    <!-- PRODUCT CARD: to add a product, copy this whole <article> block, then change the picture name, title, description and price. -->
+                    <article class="card">
+                        <!-- PICTURE SPOT: put your photo in the images folder with the file name shown in url(images/...) below. Until the photo is added, the label text is shown instead. -->
+                        <div class="slot">
+                            <span>Smart TV 43 inch</span>
+                            <div class="pic" role="img" aria-label="Smart TV 43 inch" style="background-image:url(smart.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Smart TV 43 inch</h3>
+                            <p>Full HD, Wi-Fi, built-in apps.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Smart TV 55 inch</span>
+                            <div class="pic" role="img" aria-label="Smart TV 55 inch" style="background-image:url(55inch.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Smart TV 55 inch</h3>
+                            <p>4K UHD, ideal for the living room.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Digital TV decoder</span>
+                            <div class="pic" role="img" aria-label="Digital TV decoder" style="background-image:url(decoder.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Digital TV decoder</h3>
+                            <p>Free-to-air and pay TV ready.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div id="phones" class="group">
+                <h2 class="cat-title">Phones and tablets</h2>
+                <div class="products">
+                    <article class="card">
+                        <div class="slot">
+                            <span>Smartphone</span>
+                            <div class="pic" role="img" aria-label="Smartphone" style="background-image:url(smartphone.webp)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Smartphone</h3>
+                            <p>Android phones in several price ranges.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Tablet</span>
+                            <div class="pic" role="img" aria-label="Tablet" style="background-image:url(tablet.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Tablet</h3>
+                            <p>Great for school, work and video.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Chargers and cables</span>
+                            <div class="pic" role="img" aria-label="Chargers and cables" style="background-image:url(charger\ and\ cables.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Chargers and cables</h3>
+                            <p>Fast chargers, power banks, earphones.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div id="computers" class="group">
+                <h2 class="cat-title">Computers and printers</h2>
+                <div class="products">
+                    <article class="card">
+                        <div class="slot">
+                            <span>Laptop</span>
+                            <div class="pic" role="img" aria-label="Laptop" style="background-image:url(laptop.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Laptop</h3>
+                            <p>For students, offices and business.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Desktop computer</span>
+                            <div class="pic" role="img" aria-label="Desktop computer" style="background-image:url(desktop.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Desktop computer</h3>
+                            <p>Complete set with monitor.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Printer</span>
+                            <div class="pic" role="img" aria-label="Printer" style="background-image:url(printer.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Printer</h3>
+                            <p>Inkjet and laser printers.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div id="audio" class="group">
+                <h2 class="cat-title">Sound systems</h2>
+                <div class="products">
+                    <article class="card">
+                        <div class="slot">
+                            <span>Home theatre system</span>
+                            <div class="pic" role="img" aria-label="Home theatre system" style="background-image:url(theatre.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Home theatre system</h3>
+                            <p>Bluetooth, USB and FM radio.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Bluetooth speaker</span>
+                            <div class="pic" role="img" aria-label="Bluetooth speaker" style="background-image:url(bluetooth.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Bluetooth speaker</h3>
+                            <p>Portable sound for home or events.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Radio</span>
+                            <div class="pic" role="img" aria-label="Radio" style="background-image:url(radio.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Radio</h3>
+                            <p>Rechargeable and solar radios.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div id="solar" class="group">
+                <h2 class="cat-title">Solar and power</h2>
+                <div class="products">
+                    <article class="card">
+                        <div class="slot">
+                            <span>Solar panel kit</span>
+                            <div class="pic" role="img" aria-label="Solar panel kit" style="background-image:url(panel\ kit.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Solar panel kit</h3>
+                            <p>Power for lights, TV and phones.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>Battery and inverter</span>
+                            <div class="pic" role="img" aria-label="Battery and inverter" style="background-image:url(inverter.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>Battery and inverter</h3>
+                            <p>Backup power for home and shop.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="slot">
+                            <span>LED bulbs and extension cables</span>
+                            <div class="pic" role="img" aria-label="LED bulbs and extension cables" style="background-image:url(bulbs.jpg)"></div>
+                        </div>
+                        <div class="body">
+                            <h3>LED bulbs and extension cables</h3>
+                            <p>Save on electricity bills.</p>
+                            <span class="price">Call for price</span>
+                            <a class="btn" href="contact.html">Ask about this</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER: the bottom of every page. -->
+    <footer>
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <h3>Deliny Electronics Center</h3>
+                    <p>Quality electronics, honest prices and after-sales support in Masaka.</p>
+                </div>
+                <div>
+                    <h3>Visit us</h3>
+                    <p>Masaka, Uganda<br>Mon to Sat: 8:00am to 7:00pm<br>Tel: +256 746 772 430</p>
+                </div>
+            </div>
+            <p class="copy">&copy; 2026 Deliny Electronics Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- WHATSAPP BUTTON: the green button that floats at the bottom right. Change the number in the link. -->
+    <a class="wa" href="https://wa.me/256746772430" target="_blank" rel="noopener">WhatsApp us</a>
+</body>
+
+</html>

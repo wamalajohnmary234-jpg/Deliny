@@ -1,0 +1,552 @@
+/*
+  Deliny Electronics Center - style.css
+  This file controls how every page looks.
+  Each block below has a title in plain English.
+  Tip: change the colours in :root first.
+*/
+
+/* COLOURS: change a colour once here and it changes on every page. */
+:root {
+  --navy: #10243E;
+  --navy-2: #1B3A5E;
+  --orange: #F26B1D;
+  --teal: #1FA39A;
+  --bg: #F5F7FA;
+  --ink: #14202E;
+  --mute: #5B6773;
+  --line: #DCE2E9;
+  --white: #fff;
+}
+/* RESET: removes the browser's default spacing so every page starts the same. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* PAGE BASICS: the main font, text colour and background. */
+body {
+  font-family: "Work Sans",system-ui,Arial,sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 17px;
+}
+h1,
+h2,
+h3 {
+  font-family: "Archivo",system-ui,Arial,sans-serif;
+  line-height: 1.15;
+  color: var(--navy);
+}
+h1 {
+  font-size: clamp(2rem,5vw,3.4rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+h2 {
+  font-size: clamp(1.5rem,3.2vw,2.2rem);
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+p {
+  max-width: 68ch;
+}
+a {
+  color: var(--navy-2);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+/* CONTENT WIDTH: keeps the text centred and not too wide on big screens. */
+.wrap {
+  width: min(1120px,92%);
+  margin-inline: auto;
+}
+/* SPACING: space above and below each section. */
+section {
+  padding: 4rem 0;
+}
+.lead {
+  color: var(--mute);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+/* TOP BAR: stays at the top while the visitor scrolls. */
+header {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8rem 0;
+}
+.brand {
+  color: var(--white);
+  text-decoration: none;
+  font-family: "Archivo",sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+.brand i {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--orange);
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+.brand small {
+  display: block;
+  font-weight: 500;
+  font-size: .72rem;
+  color: #AFC1D6;
+  letter-spacing: .02em;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: .3rem;
+}
+nav a {
+  color: #DCE6F2;
+  text-decoration: none;
+  padding: .5rem .9rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+nav a:hover,
+nav a.on {
+  background: var(--navy-2);
+  color: var(--white);
+}
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.menu-toggle:focus-visible+.menu-btn {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid #3A5A80;
+  color: var(--white);
+  border-radius: 6px;
+  padding: .4rem .7rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* BUTTONS: the orange buttons. .ghost and .dark are other button styles. */
+.btn {
+  display: inline-block;
+  padding: .8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--orange);
+  background: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #D95A10;
+  border-color: #D95A10;
+}
+.btn.ghost {
+  background: transparent;
+  color: var(--white);
+  border-color: #5C7CA3;
+}
+.btn.ghost:hover {
+  background: var(--navy-2);
+}
+.btn.dark {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+/* HERO: the big first section on the home page. */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 4.5rem 0;
+}
+.hero h1 {
+  color: var(--white);
+}
+.hero .grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 3rem;
+  align-items: center;
+}
+.hero p {
+  color: #C5D3E4;
+  margin: 1.1rem 0 1.8rem;
+  font-size: 1.15rem;
+}
+.hero .actions {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+/* PAGE TITLE BANNER: the dark strip at the top of inner pages. */
+.page-head {
+  background: var(--navy);
+  padding: 3rem 0;
+}
+.page-head h1 {
+  color: var(--white);
+  font-size: clamp(1.8rem,4vw,2.6rem);
+}
+.page-head p {
+  color: #C5D3E4;
+  margin-top: .5rem;
+}
+/* PICTURE SPOTS: a rounded box that holds a photo (or a label if no photo yet). */
+.slot {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg,#1B3A5E,#0E1F36);
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  color: #7E98B8;
+  font-size: .9rem;
+  text-align: center;
+  padding: 1rem;
+}
+.slot span {
+  position: relative;
+}
+.slot .pic {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.slot.tall {
+  min-height: 380px;
+}
+.slot.light {
+  background: linear-gradient(135deg,#E4EAF1,#D3DCE7);
+  color: #6B7B8D;
+}
+/* CATEGORY CARDS: a grid that fits as many cards per row as the screen allows. */
+.cats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+  gap: 1.2rem;
+}
+.cat {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.cat:hover {
+  border-color: var(--orange);
+}
+.cat .slot {
+  border-radius: 0;
+  min-height: 150px;
+}
+.cat div.t {
+  padding: 1rem 1.1rem;
+}
+.cat p {
+  color: var(--mute);
+  font-size: .95rem;
+}
+/* PRODUCT CARDS: grid and card design on the products page. */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  gap: 1.4rem;
+}
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card .slot {
+  border-radius: 0;
+  min-height: 190px;
+}
+.card .body {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1;
+}
+.card .brandname {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: .9rem;
+}
+.card .price {
+  font-family: "Archivo",sans-serif;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: auto;
+}
+.card .btn {
+  padding: .55rem 1rem;
+  font-size: .95rem;
+  text-align: center;
+}
+/* QUICK LINKS: the round buttons above the products. */
+.filters {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.6rem;
+}
+.filters a {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: .5rem 1rem;
+  border-radius: 99px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: .95rem;
+}
+.filters a:hover {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+.group {
+  scroll-margin-top: 1rem;
+}
+.cat-title {
+  margin: 2.2rem 0 1rem;
+  padding-bottom: .4rem;
+  border-bottom: 2px solid var(--line);
+}
+/* TWO COLUMNS: text on one side, picture on the other. */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+/* SHORT POINTS: the small boxes with a green line on the left. */
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.value {
+  background: var(--white);
+  border-left: 4px solid var(--teal);
+  padding: 1.2rem 1.3rem;
+  border-radius: 0 10px 10px 0;
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.value p {
+  color: var(--mute);
+  font-size: .97rem;
+}
+/* CALL TO ACTION STRIP. */
+.band {
+  background: var(--navy-2);
+  color: var(--white);
+  text-align: center;
+}
+.band h2 {
+  color: var(--white);
+}
+.band p {
+  margin: 0 auto 1.5rem;
+  color: #C5D3E4;
+}
+.alt {
+  background: #EAF0F6;
+}
+/* CONTACT PAGE: shop details on the left, form on the right. */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+}
+.info li {
+  list-style: none;
+  margin-bottom: 1.1rem;
+}
+.info strong {
+  display: block;
+  color: var(--navy);
+}
+/* FORM: box, labels and input fields. */
+form {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 1.6rem;
+  border-radius: 12px;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin: .9rem 0 .3rem;
+  font-size: .95rem;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: .7rem .8rem;
+  border: 1px solid #B9C4D0;
+  border-radius: 8px;
+  font: inherit;
+  background: var(--white);
+}
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+form .btn {
+  margin-top: 1.2rem;
+  width: 100%;
+}
+.note {
+  font-size: .88rem;
+  color: var(--mute);
+  margin-top: .7rem;
+}
+.map {
+  margin-top: 1.5rem;
+  min-height: 200px;
+}
+/* FOOTER: dark bottom area of every page. */
+footer {
+  background: #0B1A2E;
+  color: #AFC1D6;
+  padding: 3rem 0 1.5rem;
+  font-size: .95rem;
+}
+.foot {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+}
+footer h3 {
+  color: var(--white);
+  font-size: 1rem;
+}
+footer a {
+  color: #AFC1D6;
+  display: block;
+  text-decoration: none;
+  margin: .25rem 0;
+}
+footer a:hover {
+  color: var(--white);
+}
+.copy {
+  border-top: 1px solid #1E3453;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: .88rem;
+}
+/* WHATSAPP BUTTON: floats at the bottom right of the screen. */
+.wa {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: #25D366;
+  color: #073B1B;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .75rem 1.1rem;
+  border-radius: 99px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  z-index: 60;
+}
+
+/* PHONE SCREENS: these rules only apply when the screen is narrow. */
+@media (max-width: 860px) {
+  .hero .grid,
+  .split,
+  .contact-grid,
+  .foot {
+    grid-template-columns: 1fr;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: var(--navy);
+    padding: .5rem 4%;
+  }
+  .menu-toggle:checked~nav {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  /* TOP BAR: stays at the top while the visitor scrolls. */
+  header {
+    position: relative;
+  }
+  .slot.tall {
+    min-height: 260px;
+  }
+}
+
+/* ACCESSIBILITY: stops smooth scrolling for people who turn off motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* LOGO: the shop logo in the top bar. Change the height to make it bigger or smaller. */
+.logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+}

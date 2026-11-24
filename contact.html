@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the page fit phone screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Deliny Electronics Center, Masaka</title>
+    <meta name="description" content="Deliny Electronics Center in Masaka, Uganda: TVs, phones, laptops, sound systems, solar and accessories.">
+    <!-- Connects this page to style.css, which holds all the colours and layout. Keep style.css in the same folder. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Small icon shown in the browser tab. -->
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <!-- TOP BAR: shop name and the menu. This same block is on every page. -->
+    <header>
+        <div class="wrap bar">
+            <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="Deliny Electronics Center: Buy, Sell, Service"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <label for="menu-toggle" class="menu-btn">Menu</label>
+            <nav aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- PAGE TITLE: the dark banner at the top of this page. -->
+    <div class="page-head">
+        <div class="wrap">
+            <h1>Contact us</h1>
+            <p>Visit the shop, call, or send a message on WhatsApp.</p>
+        </div>
+    </div>
+    <!-- A new section of the page -->
+    <section>
+        <div class="wrap contact-grid">
+            <div>
+                <h2>Find us in Masaka</h2>
+                <!-- SHOP DETAILS: change the address, phone, email and hours here. -->
+                <ul class="info">
+                    <li><strong>Address</strong>Deliny Electronics Center, Masaka, Uganda (add street or building name)</li>
+                    <li><strong>Phone / WhatsApp</strong><a href="tel:+256746772430">+256 746 772 430</a></li>
+                    <li><strong>Email</strong><a href="mailto:wamalajohnmary234@gmail.com">wamalajohnmary234@gmail.com</a></li>
+                    <li><strong>Opening hours</strong>Monday to Saturday: 8:00am to 7:00pm<br>Sunday: 10:00am to 4:00pm</li>
+                </ul>
+                <div class="map">
+
+                    <!-- DELINY ELECTRONICS CENTER - LOCATION -->
+                    <div class="slot light">
+                        <h3>Find Deliny Electronics Center</h3>
+                        <p>Visit us in Masaka City, Uganda.</p>
+
+                        <iframe src="https://maps.google.com/maps?q=Masaka%20Central%20Market%2C%20Masaka%2C%20Uganda&output=embed" width="100%" height="350" style="border:0; border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+                        <p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Masaka+Central+Market+Masaka+Uganda" target="_blank" rel="noopener noreferrer">
+          Get Directions
+        </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- CONTACT FORM: when a visitor presses Send, their email app opens with the message addressed to the shop email. -->
+            <form action="mailto:wamalajohnmary234@gmail.com" method="post" enctype="text/plain">
+                <h2>Send us a message</h2>
+                <label for="name">Your name</label>
+                <input id="name" name="name" required>
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" required>
+                <label for="topic">I am interested in</label>
+                <select id="topic" name="topic"><option>Televisions</option><option>Phones and tablets</option><option>Computers and printers</option><option>Sound systems</option><option>Solar and power</option><option>Other</option></select>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button class="btn" type="submit">Send by email</button>
+                <p class="note">This opens your email app. For a faster reply, <a href="https://wa.me/256746772430" target="_blank" rel="noopener">message us on WhatsApp</a>.</p>
+            </form>
+        </div>
+    </section>
+    <!-- FOOTER: the bottom of every page. -->
+    <footer>
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <h3>Deliny Electronics Center</h3>
+                    <p>Quality electronics, honest prices and after-sales support in Masaka.</p>
+                </div>
+                <div>
+                    <h3>Visit us</h3>
+                    <p>Masaka, Uganda<br>Mon to Sat: 8:00am to 7:00pm<br>Tel: +256 746 772 430</p>
+                </div>
+            </div>
+            <p class="copy">&copy; 2026 Deliny Electronics Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- WHATSAPP BUTTON: the green button that floats at the bottom right. Change the number in the link. -->
+    <a class="wa" href="https://wa.me/256746772430" target="_blank" rel="noopener">WhatsApp us</a>
+</body>
+
+</html>

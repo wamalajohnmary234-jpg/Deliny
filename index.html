@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the page fit phone screens. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Deliny Electronics Center, Masaka</title>
+    <meta name="description" content="Deliny Electronics Center in Masaka, Uganda: TVs, phones, laptops, sound systems, solar and accessories.">
+
+    <!-- Connects this page to style.css, which holds all the colours and layout. Keep style.css in the same folder. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Small icon shown in the browser tab. -->
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <!-- TOP BAR: shop name and the menu. This same block is on every page. -->
+    <header>
+        <div class="wrap bar">
+            <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="Deliny Electronics Center: Buy, Sell, Service"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+            <label for="menu-toggle" class="menu-btn">Menu</label>
+            <nav aria-label="Main">
+                <ul>
+                    <li><a href="index.html" class=on aria-current=page>Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO: the big first section with the main headline and two buttons. -->
+    <section class="hero">
+        <div class="wrap grid">
+            <div>
+                <h1>Electronics you can trust, right here in Masaka.</h1>
+                <p>Televisions, phones, laptops, sound systems and solar power from trusted brands, with a warranty and a team that helps after you buy.</p>
+                <div class="actions"><a class="btn" href="products.html">See our products</a><a class="btn ghost" href="contact.html">Visit or call us</a></div>
+            </div>
+            <!-- PICTURE SPOT: put your photo in the images folder with the file name shown in url(images/...) below. Until the photo is added, the label text is shown instead. -->
+            <div class="slot tall">
+                <span>Photo of the Deliny shop front or a display of TVs and phones</span>
+                <div class="pic" role="img" aria-label="shop.jpg" style="background-image:url(shop.jpg)"></div>
+            </div>
+        </div>
+    </section>
+    <!-- A new section of the page -->
+    <section>
+        <div class="wrap">
+            <h2>What we sell</h2>
+            <p class="lead">Everything for your home, shop or office under one roof.</p>
+            <!-- CATEGORY CARDS: one card for each type of product we sell. -->
+            <div class="cats">
+                <a class="cat" href="products.html">
+                    <div class="slot">
+                        <span>Televisions</span>
+                        <div class="pic" role="img" aria-label="Televisions" style="background-image:url(televison.jpg)"></div>
+                    </div>
+                    <div class="t">
+                        <h3>Televisions</h3>
+                        <p>Smart TVs and decoders for every room.</p>
+                    </div>
+                </a>
+                <a class="cat" href="products.html">
+                    <div class="slot">
+                        <span>Phones and tablets</span>
+                        <div class="pic" role="img" aria-label="phones and tablets" style="background-image:url(phone.jpg)"></div>
+                    </div>
+                    <div class="t">
+                        <h3>Phones and tablets</h3>
+                        <p>Smartphones, tablets and chargers.</p>
+                    </div>
+                </a>
+                <a class="cat" href="products.html">
+                    <div class="slot">
+                        <span>Computers</span>
+                        <div class="pic" role="img" aria-label="Computers" style="background-image:url(computers.jpg)"></div>
+                    </div>
+                    <div class="t">
+                        <h3>Computers</h3>
+                        <p>Laptops, desktops, printers and accessories.</p>
+                    </div>
+                </a>
+                <a class="cat" href="products.html">
+                    <div class="slot">
+                        <span>Sound systems</span>
+                        <div class="pic" role="img" aria-label="Sound systems" style="background-image:url(sound.jpg)"></div>
+                    </div>
+                    <div class="t">
+                        <h3>Sound systems</h3>
+                        <p>Home theatres, speakers and radios.</p>
+                    </div>
+                </a>
+                <a class="cat" href="products.html">
+                    <div class="slot">
+                        <span>Solar and power</span>
+                        <div class="pic" role="img" aria-label="Solar and power" style="background-image:url(solar.jpg)"></div>
+                    </div>
+                    <div class="t">
+                        <h3>Solar and power</h3>
+                        <p>Panels, batteries, inverters and bulbs.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="alt">
+        <div class="wrap">
+            <h2>Why people buy from us</h2>
+            <!-- SHORT POINTS: small boxes with a title and a sentence. Copy one box to add another. -->
+            <div class="values">
+                <div class="value">
+                    <h3>Genuine products</h3>
+                    <p>New items from known brands, never fakes.</p>
+                </div>
+                <div class="value">
+                    <h3>Warranty on every sale</h3>
+                    <p>If something fails, bring it back and we sort it out.</p>
+                </div>
+                <div class="value">
+                    <h3>Fair, clear prices</h3>
+                    <p>Ask for the price and get the price, with no surprises.</p>
+                </div>
+                <div class="value">
+                    <h3>Help after you buy</h3>
+                    <p>Setup, advice and repairs from our technicians.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CALL TO ACTION: a coloured strip that sends visitors to the contact page. -->
+    <section class="band">
+        <div class="wrap">
+            <h2>Looking for something specific?</h2>
+            <p>Tell us what you need and we will confirm price and availability on WhatsApp.</p>
+            <a class="btn" href="contact.html">Ask about a product</a>
+        </div>
+    </section>
+    <!-- FOOTER: the bottom of every page. -->
+    <footer>
+        <div class="wrap">
+            <div class="foot">
+                <div>
+                    <h3>Deliny Electronics Center</h3>
+                    <p>Quality electronics, honest prices and after-sales support in Masaka.</p>
+                </div>
+                <div>
+                    <h3>Visit us</h3>
+                    <p>Masaka, Uganda<br>Mon to Sat: 8:00am to 7:00pm<br>Tel: +256 746 772 430</p>
+                </div>
+            </div>
+            <p class="copy">&copy; 2026 Deliny Electronics Center. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- WHATSAPP BUTTON: the green button that floats at the bottom right. Change the number in the link. -->
+    <a class="wa" href="https://wa.me/256746772430" target="_blank" rel="noopener">WhatsApp us</a>
+</body>
+
+</html>
